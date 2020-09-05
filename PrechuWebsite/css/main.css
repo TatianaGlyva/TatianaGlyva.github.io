@@ -1,0 +1,448 @@
+/* Cтили для кроссбраузерности елементов НЕ ТРОГАЕМ */
+@import url(components/normalize.css);
+
+/* Базовые стили для форм НЕ ТРОГАЕМ */
+@import url(components/form.css);
+
+/* Базовые стили для типографии (изменяем от макета к макету) */
+@import url(components/base.css);
+
+/* Стили для грида (изменяем от макета к макету) */
+@import url(components/grid.css);
+
+/* Стили для кнопок (изменяем от макета к макету) */
+@import url(components/button.css);
+
+/* Стили для компоненты nav (изменяем от макета к макету) */
+@import url(components/navigation.css);
+
+/* Стили для компоненты card (изменяем от макета к макету) */
+@import url(components/card.css);
+
+/* Сюда пишем общие стили для проекта (изменяем от макета к макету) */
+@import url(components/common.css);
+
+
+
+/* .header {
+    padding-top: 20px;
+    position: fixed;
+    z-index: 30;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 85px;
+}
+
+
+.header.default {
+    background-color: rgba(174, 174, 174, 0.9);
+    transition: background-color 0.5s;
+}
+
+.layout-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.burger-menu-button {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    z-index: 30;
+    width: 55px;
+    height: 45px;
+    background-color: #5094f2;
+}
+
+.burger-menu-button:hover .burger-menu-lines {
+    filter: brightness(0.7);
+}
+
+.burger-menu-lines,
+.burger-menu-lines::after,
+.burger-menu-lines::before {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    transition: all 0.5s;
+}
+
+.burger-menu-lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.burger-menu-lines::before {
+    content: '';
+    top: -12px;
+}
+
+.burger-menu-lines::after {
+    content: '';
+    top: 12px;
+}
+
+.burger-menu-active .burger-menu-lines {
+    background-color: transparent;
+}
+
+.burger-menu-active .burger-menu-lines::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.burger-menu-active .burger-menu-lines::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.burger-menu-nav {
+    position: fixed;
+    top: 85px;
+    z-index: 20;
+    display: flex;
+    flex-flow: column;
+    overflow: auto;
+    height: 100%;
+    background-color: #fff;
+    right: -100%;
+    transition: right 0.8s;
+}
+
+.burger-menu-active .burger-menu-nav {
+    right: 0;
+}
+
+.burger-menu-nav.default {
+    background-color: rgba(174, 174, 174, 0.9);
+    transition: background-color 0.5s;
+}
+
+.navigation {
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin: 5px 10px;
+}
+
+.navigation li.active .burger-menu-link {
+    color: #5094f2;
+}
+
+.navigation li.active .burger-menu-link::before {
+    position: absolute;
+    content: '';
+    height: 4px;
+    background-color: #5094f2;
+    right: 0;
+    top: 100%;
+    width: 100%;
+}
+
+.burger-menu-link {
+    position: relative;
+    text-align: center;
+    display: block;
+    padding: 5px 35px;
+    font-size: 25px;
+    text-transform: uppercase;
+    transition: color 0.5s;
+}
+
+.burger-menu-link::before {
+    position: absolute;
+    content: '';
+    height: 4px;
+    background-color: #5094f2;
+    right: 0;
+    top: 100%;
+    width: 0;
+    transition: width 1s;
+}
+
+.burger-menu-link:hover::before {
+    width: 100%;
+}
+
+.burger-menu-link:hover {
+    text-decoration: none;
+}
+
+.burger-menu-link.default {
+    color: #fff;
+}
+
+.burger-menu-link:hover.default {
+    color: #5094f2;
+}
+
+.burger-menu-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10;
+}
+
+.burger-menu-active .burger-menu-overlay {
+	display: block;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero {
+    margin-top: 85px;
+    padding: 20px 0 20px 0;
+    color: #fff;
+}
+
+.hero-layout {
+    text-align: center;
+}
+
+.hero-content {
+    padding: 0 30px;
+}
+
+.hero-content h3 {
+    font-weight: 400;
+}
+
+.grid-gallery {
+    margin: 0 -60px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-gallery {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.icon-item {
+    margin: 25px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.card-gallery img {
+    max-width: 80px;
+    height: 80px;
+}
+
+.icon-item-pensil {
+    background-color: #5094f2;
+}
+
+.icon-item-desktop {
+    background-color: #d94748;
+}
+
+.icon-item-basket {
+    background-color: #ebbb11;
+}
+
+.card-gallery h2 {
+    color: #5094f2;
+}
+
+.shopping-section {
+    padding: 50px 0;
+
+}
+
+.shopping-section h1 {
+    text-align: center;
+}
+
+.shopping-img {
+    text-align: center;
+
+}
+
+.shopping-section img {
+    margin: 20px 0 20px;
+    max-width: 200px;
+}
+
+.shopping-description {
+    padding: 0 20px;
+}
+
+.footer {
+    padding: 40px 0;
+    border-top: 1px solid #cccccc;
+    text-align: center;
+}
+
+
+@media (min-width: 468px) {
+    .card-gallery {
+        flex-direction: row;
+    }
+}
+
+
+@media (min-width: 640px) {
+
+    h3 {
+        font-size: 31px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .hero-layout {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .phone-item {
+        width: 30%;
+    }
+
+    .hero-content {
+        width: 70%;
+        text-align: left;
+        padding: 0 10%;
+    }
+}
+
+@media (min-width: 768px) {
+
+
+    .burger-menu {
+        display: none;
+    }
+
+    .burger-menu-nav {
+        position: static;
+        overflow: visible;
+    }
+
+    .burger-menu-nav.default {
+        background-color: transparent;
+        transition: background-color 0s;
+    }
+
+    .navigation {
+        display: flex;
+
+    }
+
+    .navigation li {
+        margin: 0 10px;
+        position: relative;
+    }
+
+    .burger-menu-link {
+        text-transform: none;
+        font-size: 20px;
+        padding: 10px 5px;
+        transition: none;
+    }
+
+    .burger-menu-link::before {
+        left: 0;
+        transition: all 1s;
+    }
+
+    .hero {
+        position: relative;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        height: 15px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url(../images/decore.png);
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+
+    .phone-item {
+        width: 40%;
+    }
+
+    .hero-content {
+        width: 60%;
+    }
+
+    .grid-item {
+        width: 50%;
+        border-bottom: 0;
+        padding: 0 45px;
+    }
+
+    .card-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .shopping-section h1 {
+        text-align: left;
+    }
+
+    .shopping-layout {
+        display: flex;
+    }
+
+    .shopping-img,
+    .shopping-description {
+        width: 50%;
+        text-align: left;
+    }
+
+    .shopping-section img {
+        max-width: 100%;
+    }
+
+    .footer {
+        text-align: right;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .grid-item {
+        width: 33.332%;
+    }
+
+    .card-gallery h2 {
+        font-size: 20px;
+    }
+
+    .icon-item {
+        width: 180px;
+        height: 180px;
+    }
+} */

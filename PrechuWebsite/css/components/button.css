@@ -1,0 +1,75 @@
+/* Общие стили для кнопок */
+.burger-menu-button {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    z-index: 30;
+    width: 55px;
+    height: 45px;
+    background-color: #5094f2;
+}
+
+.burger-menu-button:hover .burger-menu-lines {
+    filter: brightness(0.7);
+}
+
+.burger-menu-lines,
+.burger-menu-lines::after,
+.burger-menu-lines::before {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    transition: all 0.5s;
+}
+
+.burger-menu-lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.burger-menu-lines::before {
+    content: '';
+    top: -12px;
+}
+
+.burger-menu-lines::after {
+    content: '';
+    top: 12px;
+}
+
+.burger-menu-active .burger-menu-lines {
+    background-color: transparent;
+}
+
+.burger-menu-active .burger-menu-lines::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.burger-menu-active .burger-menu-lines::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.button {
+	display: inline-block;
+	line-height: 1.2;
+	text-align: center;
+    padding: 10px 10px 10px 50px;
+    color: #fff;
+    font-size: 31px;
+    background-color: #5094f2;
+    background-image: url(../../images/shape-2.svg);
+    background-position: 6% 50%;
+    background-repeat: no-repeat;
+    transition: background-color 0.5s;
+}
+
+.button:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #457cc7;
+}
+

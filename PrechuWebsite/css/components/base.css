@@ -1,0 +1,63 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font: 16px/2 'Source Sans Pro', Arial, Helvetica, sans-serif;
+	color: #909090;
+	background-color: #fff;
+	min-width: 320px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+p, ul, ol {
+	margin: 0 0 0.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.2;
+	margin: 0  0 0.5em;
+}
+
+h1 {
+	font-size: 31px;
+}
+
+h2 {
+	font-size: 34px;
+}
+
+h3 {
+	font-size: 22px;
+}
+
+h4 {
+	font-size: 22px;
+}
+
+h5 {
+	font-size: 16px;
+}
+
+h6 {
+	font-size: 14px;
+}
+
+a {
+	color: #909090;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #5094f2;
+}

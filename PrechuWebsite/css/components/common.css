@@ -1,0 +1,329 @@
+/* Обертка которая обрезает все лишнее что выходит за ширину страници,
+к примеру если вы что то вытаскиваете марджинами то у вас появится горизонтальный скролл на странице, эта обертка его срезает
++ если вы забыли указать position: relative; на нужном блоке, это ваша отправная точка для позиционирования,
+чтобы не трогать body
+эта обертка есть в каждом проекте */
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Элемент который центрирует контент на странице (только центрирует) */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    padding-top: 20px;
+    position: fixed;
+    z-index: 30;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 85px;
+}
+
+
+.header.default {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 1px rgba(174, 174, 174, 0.9)
+}
+
+.hero {
+    margin-top: 85px;
+    padding: 20px 0 20px 0;
+    color: #fff;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.hero-layout {
+    text-align: center;
+}
+
+.phone-item img {
+    max-width: 182px;
+    margin: 0 auto 15px;
+}
+
+.hero-content {
+    padding: 0 30px 0 30px;
+}
+
+.hero-content h3 {
+    font-weight: 400;
+}
+
+.hero-content {
+    font-size: 22px;
+}
+
+.icon-item {
+    margin: 25px;
+    width: 137px;
+    height: 137px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.card-gallery img {
+    max-width: 70px;
+    height: 70px;
+}
+
+.card-gallery a:hover {
+    text-decoration: none;
+    color: #909090;
+}
+
+.icon-item-pensil {
+    background-color: #5094f2;
+    transition: background-color 0.5s;
+}
+
+.card-gallery a:hover .icon-item-pensil {
+    background-color: #4076c1;
+}
+
+.icon-item-desktop {
+    background-color: #d94748;
+    transition: background-color 0.5s;
+}
+
+.card-gallery a:hover .icon-item-desktop {
+    background-color: #b33c3c;
+}
+
+.icon-item-basket {
+    background-color: #ebbb11;
+    transition: background-color 0.5s;
+}
+
+.card-gallery a:hover .icon-item-basket {
+    background-color: #c39b0f;
+}
+
+.content-item h3 {
+    color: #5094f2;
+}
+
+.shopping-section {
+    padding: 50px 0;
+}
+
+.shopping-heading {
+    text-align: center;
+}
+
+.shopping-section h1 {
+    text-align: center;
+}
+
+.shopping-img {
+    text-align: center;
+}
+
+.shopping-section img {
+    margin: 20px 0 20px;
+    max-width: 200px;
+}
+
+.shopping-description {
+    padding: 0 20px;
+}
+
+.footer {
+    padding: 40px 0;
+    border-top: 1px solid #cccccc;
+    text-align: center;
+}
+
+@media (min-width: 480px) {
+    .card-gallery a {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .icon-item {
+        align-self: flex-start;
+    }
+}
+
+
+@media (min-width: 640px) {
+
+    h2 {
+        font-size: 42px;
+    }
+
+    h3 {
+        font-size: 34px;
+    }
+
+    .hero-layout {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .phone-item {
+        width: 30%;
+    }
+
+    .phone-item img {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .hero-content {
+        width: 70%;
+        text-align: left;
+    }
+}
+
+@media (min-width: 768px) {
+
+    h1 {
+        font-size: 35px;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+
+    .layout-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .burger-menu-nav {
+        position: static;
+        overflow: visible;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .navigation li a:hover.default {
+        color: #5094f2;
+    }
+
+    .navigation {
+        display: flex;
+
+    }
+
+    .navigation li {
+        margin: 0 10px;
+        position: relative;
+    }
+
+    .navigation li a {
+        text-transform: none;
+        font-size: 20px;
+        padding: 10px 5px;
+    }
+
+    .navigation li a::before {
+        left: 0;
+        transition: all 0.5s;
+    }
+
+    .hero {
+        position: relative;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        height: 15px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url(../../images/decore.png);
+        background-repeat: repeat-x;
+        background-size: contain;
+    }
+
+    .phone-item {
+        width: 40%;
+    }
+
+    .hero-content {
+        width: 60%;
+        font-size: 26px;
+    }
+
+    .grid-gallery {
+        margin: 0 -15px;
+    }
+
+
+    .grid-item {
+        width: 33.332%;
+        border-bottom: 0;
+        padding: 0 15px;
+    }
+
+    .card-gallery a {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content-item h3 {
+        font-size: 20px;
+    }
+
+    .shopping-heading {
+        text-align: left;
+    }
+
+    .shopping-layout {
+        display: flex;
+    }
+
+    .shopping-img,
+    .shopping-description {
+        width: 50%;
+        text-align: left;
+    }
+
+    .shopping-section img {
+        max-width: 100%;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .card-gallery img {
+        max-width: 80px;
+        height: 80px;
+    }
+
+    .card-gallery h2 {
+        font-size: 20px;
+    }
+
+    .icon-item {
+        width: 180px;
+        height: 180px;
+    }
+}
