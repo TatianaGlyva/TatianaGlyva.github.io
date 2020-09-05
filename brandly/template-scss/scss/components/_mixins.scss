@@ -1,0 +1,86 @@
+// list reset
+%listreset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+%buttonreset {
+    background-color: transparent;
+    border: none;
+    font-size: 0;
+    padding: 0;
+    outline: none;
+}
+
+%buttonform {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid $light-gray;
+    transition: background-color 0.5s, border 0.5s;
+}
+
+%buttonhover {
+    background-color: $dark-gray;
+    border: 1px solid $dark-gray;
+}
+
+
+// clearfix
+%clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+%posoverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+
+
+/// Mixin for styling form-placeholders
+/// @example scss - Usage
+///   @include placeholder {
+///    color: #333;
+///   }
+///
+///   input[type='text'],
+///   input[type='tel'],
+///   input[type='email'] {
+///     @include placeholder {
+///      color: red;
+///     }
+///   }
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content
+    }
+
+    &::-moz-placeholder {
+        opacity: 1;
+        @content
+    }
+
+    &:-moz-placeholder {
+        @content
+    }
+
+    &:-ms-input-placeholder {
+        @content
+    }
+
+    &.placeholder {
+        @content
+    }
+}

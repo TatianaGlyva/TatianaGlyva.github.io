@@ -1,0 +1,65 @@
+
+.hamburher-menu-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 110px;
+    transition: transform 0.5s;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        background-color: $white;
+        transform: translateX(100%);
+        box-shadow: 8px 0 10px rgba(174, 174, 174, 0.9);
+
+        li {
+            @extend %listreset;
+            text-align: center;
+
+            a {
+                display: block;
+                color: $primary-color;
+                padding: 10px 0;
+                border-bottom: 1px solid transparent;
+                position: relative;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: darken($white, 10%);
+                }
+            }
+        }
+    }
+}
+
+.hamburher-menu-active {
+    .hamburher-menu-nav {
+        transform: translateX(-100%);
+    }
+}
+
+.footer-navigation {
+    ul {
+        margin: 0;
+        padding: 0;
+        column-count: 2;
+        min-height: 100px;
+
+        li {
+            @extend %listreset;
+            width: 50%;
+            margin-right: 10px;
+            margin-bottom: 5px;
+
+            a {
+                color: $white;
+                transition: color 0.8s;
+
+                &:hover {
+                    color: $dark-gray;
+                }
+            }
+        }
+    }
+}
