@@ -1,0 +1,71 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	color: $base-text-color;
+	background: $base-background-color;
+	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+	min-width: $base-min-width;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+p, ul, ol {
+	margin: 0 0 1.8em;
+}
+
+p {
+	opacity: 0.75;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $base-font-heading;
+	line-height: 1.2;
+	margin: 0 0 .5em;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: $h1-font-size;
+}
+
+h2 {
+	font-size: $h2-font-size;
+	font-weight: 900;
+}
+
+h3 {
+	font-size: $h3-font-size;
+	font-weight: 700;
+}
+
+h4 {
+	font-size: $h4-font-size;
+}
+
+h5 {
+	font-size: $h5-font-size;
+}
+
+h6 {
+	font-size: $h6-font-size;
+}
+
+a {
+	color: $base-link-color;
+	text-decoration: none;
+	font-family: $base-font-link;
+}
+
+a:hover {
+	text-decoration: underline;
+}

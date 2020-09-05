@@ -1,0 +1,48 @@
+.nav {
+
+}
+
+.nav li {
+
+}
+
+.nav a {
+	
+}
+
+.navigation {
+
+    @extend %listreset;
+    position: absolute;
+    top: 100%;
+    z-index: 5;
+    right: 0;
+    left: 0;
+    background-color: $white;
+
+
+    li {
+        @extend %listreset;
+
+        a {
+            display: block;
+            text-align: center;
+            color: $light-green;
+            padding: 10px;
+            text-transform: uppercase;
+            transition: color 0.5s, background-color 0.5s;
+
+            &:hover {
+                text-decoration: none;
+                color: $primary-color;
+                background-color: rgba($light-green, 0.1);
+            }
+        }
+    }
+
+    li.active {
+        a {
+            color: $primary-color;
+        }
+    }
+}

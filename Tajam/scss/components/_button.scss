@@ -1,0 +1,182 @@
+// Общие стили для кнопок 
+.button {
+	outline: none;
+	margin-bottom: 15px;
+	line-height: 1;
+	display: inline-block;
+	background-color: transparent;
+    padding: 15px;
+    text-transform: uppercase;
+    border: 1px solid $light-green;
+    font-size: $button-link-size;
+    color: $light-green;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: $light-green;
+        color: ($white);
+        text-decoration: none;
+    }
+
+    &:active {
+        background: darken($light-green, 8%);
+        color: ($white);
+    }
+}
+
+.hamburher-menu {
+    display: block;
+    z-index: 10;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.hamburher-icon {
+    height: 3px;
+    width: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50px;
+    background-color: $white;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: all ease 0.5s;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: inherit;
+        border-radius: inherit;
+        background-color: inherit;
+        margin: auto;
+        width: 50%;
+        transition: all ease 0.5s;
+    }
+
+    &::before {
+        top: -15px;
+        left: 0;
+        transform-origin: left;
+    }
+
+    &::after {
+        bottom: -15px;
+        right: 0;
+        transform-origin: right;
+    }
+}
+
+.open {
+    transform: translate(-50%, -50%) rotate(135deg);
+
+    &::before {
+        top: 0;
+        transform: translateX(100%) rotate(-90deg);
+    }
+
+    &::after {
+        bottom: 0;
+        transform: translateX(-100%) rotate(-90deg);
+    }
+}
+
+.hamburher-menu-nav {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+
+    .navigation {
+        transform: scale(0.1);
+        transition: transform 0.5s;
+    }
+}
+
+.hamburher-menu-active {
+    .hamburher-menu-nav {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s, visibility 0.5s;
+
+        .navigation {
+            transform: scale(1);
+        }
+    }
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-align: center;
+    border: none;
+
+    &:hover {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+// Стили для кнопок без обводки вариант один 
+
+.btn-primary {
+    background-color: $light-green;
+    color: #fff;
+
+    &:hover {
+        background-color: $dark-blue;
+    }
+}
+
+// Стили для кнопок без обводки вариант два 
+
+.btn-secondary {
+    background-color: $green;
+    color: #fff;
+
+    &:hover {
+        background-color: $dark-green;
+    }
+}
+
+// Стили для кнопок с обводкой вариант один 
+
+.btn-outline-primary {
+    background-color: transparent;
+    border: 2px solid $light-green;
+    color: $light-green;
+
+    &:hover {
+        background-color: $dark-blue;
+        border-color: $dark-blue;
+        color: #fff;
+    }
+}
+
+// Стили для кнопок с обводкой вариант два 
+
+.btn-outline-secondary {
+    background-color: transparent;
+    border: 2px solid $green;
+    color: $green;
+
+    &:hover {
+        background-color: $dark-green;
+        border-color: $dark-green;
+        color: #fff;
+    }
+}
+
+// Стили для блочной кнопки которая тянется по ширине родителя 
+
+.btn-block {
+    display: block;
+}

@@ -1,0 +1,64 @@
+// list reset
+%listreset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// clearfix
+%clearfix {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+%flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+%position-center {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+/// Mixin for styling form-placeholders
+/// @example scss - Usage
+///   @include placeholder {
+///    color: #333;
+///   }
+///
+///   input[type='text'],
+///   input[type='tel'],
+///   input[type='email'] {
+///     @include placeholder {
+///      color: red;
+///     }
+///   }
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&::-moz-placeholder {opacity: 1; @content}
+	&:-moz-placeholder {@content}
+	&:-ms-input-placeholder {@content}
+	&.placeholder {@content}
+}
+
+/* @mixin button-bg($bg, $bg-hov-active) {
+  background: $bg;
+  &:hover {
+    background:darken($bg-button-hov-active,8%);
+    color: ($white);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg-button-hov-active,25%);
+	color: ($white);
+  } 
+} */
+

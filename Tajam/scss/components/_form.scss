@@ -1,0 +1,44 @@
+// forms
+
+form,
+fieldset {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+
+input,
+textarea {
+	-webkit-appearance: none;
+	box-sizing: border-box;
+	padding: .3rem .5rem;
+	border: 1px solid $form-element-border-color;
+
+	@include placeholder {
+		color: $placeholder-color;
+	}
+}
+
+// input focus state
+
+input:focus,
+textarea:focus {
+	border-color: $form-element-focus-border-color;
+}
+
+select {
+	-webkit-border-radius: 0;
+}
+
+textarea {
+	resize: vertical;
+	vertical-align: top;
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='file'],
+input[type='submit'] {
+	cursor: pointer;
+}

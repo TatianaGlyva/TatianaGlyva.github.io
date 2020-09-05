@@ -1,0 +1,241 @@
+.wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+// Обертка для полей формы
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+// Поля формы
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.form-control:focus {
+    border-color: $yellow;
+
+    @include placeholder {
+        color: $red;
+    }
+}
+
+.header {
+    padding: 15px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+}
+
+.header.default {
+    position: fixed;
+    background-color: $menu-color;
+}
+
+.section-slider {
+    position: relative;
+}
+
+.slider-bg {
+    padding: 125px 0 100px 0;
+    position: relative;
+    min-height: 470px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-image: linear-gradient(to top, #09052f, #311d5e);
+        opacity: 0.85;
+    }
+}
+
+.slider-content {
+    position: relative;
+    max-width: 770px;
+    text-align: center;
+    color: $white;
+
+    h2 {
+        text-transform: capitalize;
+        padding-bottom: 25px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 2px;
+            background-color: $light-green;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    p {
+        margin-bottom: 50px;
+    }
+}
+
+
+.slick-dots {
+    @extend %listreset;
+    display: flex;
+    position: absolute;
+    z-index: 5;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li {
+        padding: 0;
+        margin: 0;
+
+        button {
+            border: 1px solid #bbbbbd;
+            font-size: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            outline: none;
+            margin: 3px;
+            padding: 0;
+            background-color: transparent;
+
+            &:hover {
+                background-color: $light-green;
+                border: 1px solid $light-green;
+            }
+        }
+    }
+
+    li.slick-active button {
+        background-color: $light-green;
+        border: 1px solid $light-green;
+    }
+}
+
+.story-section {
+    padding: 65px 0;
+}
+
+.story-layout {
+    text-align: center;
+
+    img {
+        margin-bottom: 20px;
+    }
+}
+
+.story-content {
+
+    h3 {
+        margin-bottom: 25px;
+    }
+}
+
+@media (min-width: 640px) {
+
+    .slider-bg {
+        min-height: 670px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .layout-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburher-menu {
+        display: none;
+    }
+
+    .hamburher-menu-nav {
+        opacity: 1;
+        visibility: visible;
+
+        .navigation {
+            position: static;
+            display: flex;
+            z-index: 10;
+            margin-top: 10px;
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+            background-color: transparent;
+
+            li {
+                margin-right: 5px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:last-child a {
+                    padding-right: 0;
+                }
+
+                a {
+                    color: $white;
+
+                    &:hover {
+                        background-color: transparent;
+                        color: $light-green;
+                    }
+                }
+            }
+
+            li.active {
+                a {
+                    color: $light-green;
+                }
+            }
+        }
+    }
+
+    .story-layout {
+        display: flex;
+    }
+
+    .img-layout {
+        width: 40%;
+    }
+
+    .story-content {
+        width: 60%;
+        padding-left: 30px;
+        text-align: left;
+    }
+}
+
+
+@media (min-width: 992px) {}
+
+
+@media (min-width: 1024px) {}

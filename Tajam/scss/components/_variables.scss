@@ -1,0 +1,54 @@
+// Переменные цветов
+
+$gray: #999;
+$black: #413d4b; ///// для p
+$white: #fff;  /// для color-inverse, фон body
+$light-green: #1ba5a5; //// для ссылок
+$dark-blue: #0069d9;
+$green: #28a745;
+$dark-green: #218838;
+$red: #f00;
+$yellow: #ff0;
+$primary-color: #311d5e;
+$menu-color: #100c30;
+
+
+
+
+
+// переменные для ссылок с классом button
+
+$button-link-size: 16px;
+
+
+
+$base-font-sans-serif: 'Roboto', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+$base-font-link: 'Hammersmith One','Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-heading: 'Playfair Display','Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+
+// Основной размер и цвет текста, семейство шрифта и цвет фона
+$base-text-color: $black !default;
+$base-background-color: $white !default;
+$font-size-base: 14px !default;
+$line-height-base: 1.5 !default;
+$base-font-family: $base-font-sans-serif !default;
+
+$base-min-width: 320px;
+
+// Цвет глобальной ссылки
+$base-link-color: $light-green;
+
+// Формы
+$form-element-border-color: $gray !default;
+$form-element-focus-border-color: $black !default;
+$placeholder-color: $gray !default;
+
+// Переменные font-size для заголовков
+$h1-font-size: 30px !default;
+$h2-font-size: 32px !default;
+$h3-font-size: 22px !default;
+$h4-font-size: 21px !default;
+$h5-font-size: 17px !default;
+$h6-font-size: 15px !default;
